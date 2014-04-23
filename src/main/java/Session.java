@@ -11,10 +11,12 @@ public class Session {
     public int totalDurationOfSessionInMinutes;
     public int durationFilledUpByTalks;
     public ArrayList<Talk> events;
+    public boolean isFull;
 
     public Session(){
         events = new ArrayList<Talk>();
         durationFilledUpByTalks = 0;
+        isFull = false;
     }
 
     public void setAsMorning(){
@@ -59,10 +61,16 @@ public class Session {
 
     public boolean checkIfSessionIsFull(){
         if(totalDurationOfSessionInMinutes == durationFilledUpByTalks){
+            isFull = true;
             return true;
         }else{
             return false;
         }
+
+    }
+
+    public ArrayList<Talk> getEventList(){
+        return events;
     }
 
 }
