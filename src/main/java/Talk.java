@@ -8,18 +8,18 @@
 public class Talk {
     public String title;
     public int durationInMinutes;
-    public boolean switchForIfTalkContainsLightningDuration = false;
+    private boolean switchForIfTalkContainsLightningDuration = false;
 
     public Talk(String input) {
         breakDownTheTalkInput(input);
     }
 
-    public void breakDownTheTalkInput(String talkInput) {
+    private void breakDownTheTalkInput(String talkInput) {
         title = findAndSetTitle(talkInput);
         durationInMinutes = findAndSetTheDuration(talkInput);
     }
 
-    public String findAndSetTitle(String talkContents) {
+    private String findAndSetTitle(String talkContents) {
         for (int x = 0; x < talkContents.length(); x++) {
             try {
                 Integer.parseInt(talkContents.substring(x, x + 1));
@@ -32,7 +32,7 @@ public class Talk {
         return talkContents.substring(0, talkContents.length() - 10);
     }
 
-    public int findAndSetTheDuration(String talkContents) {
+    private int findAndSetTheDuration(String talkContents) {
         if (!switchForIfTalkContainsLightningDuration) {
             durationInMinutes = Integer.parseInt(talkContents.substring(title.length() + 1, title.length() + 3));
         } else {

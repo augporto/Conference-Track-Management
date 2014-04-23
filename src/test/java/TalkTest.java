@@ -1,5 +1,4 @@
-import junit.framework.Assert;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -11,16 +10,6 @@ import org.junit.Test;
  */
 public class TalkTest {
     public void TalkTest(){
-    }
-
-    @Before
-    public void setUp(){
-//        Talk mockTalk = mock(Talk.class);
-//        mockTalk.title = "Bitcoin Benefits for Martial Artists";
-//        when (mockTalk.findAndSetTheTitle("Bitcoin Benefits for Martial Artists 30min")){
-//            mockTalk.title = "Bitcoin Benefits for Martial Artists";
-//        }
-
     }
 
     @Test
