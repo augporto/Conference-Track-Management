@@ -11,8 +11,8 @@
     <file path="/SessionTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398322761265" ignored="false" />
     <file path="/Session.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398333365087" ignored="false" />
     <file path="/TrackTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398352951342" ignored="false" />
-    <file path="/Track.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398353547431" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398353777609" ignored="false" />
+    <file path="/Track.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398383629216" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398383483288" ignored="false" />
     <file path="/Main.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398249880266" ignored="false" />
     <file path="/Conference.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398352773090" ignored="false" />
     <file path="/fileReader.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398250908203" ignored="false" />
@@ -86,7 +86,7 @@
       <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+            <state line="57" column="0" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,16 +95,7 @@
       <file leaf-file-name="Talk.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Time.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Time.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,10 +104,10 @@
       <file leaf-file-name="Track.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="602" selection-end="602" vertical-scroll-proportion="0.53859967">
+            <state line="65" column="22" selection-start="2529" selection-end="2529" vertical-scroll-proportion="-2.2695985">
               <folding>
-                <element signature="e#1899#1905#0" expanded="true" />
-                <element signature="e#3442#3448#0" expanded="true" />
+                <element signature="e#1942#1948#0" expanded="true" />
+                <element signature="e#3429#3435#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -623,7 +614,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -639,8 +630,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6770574" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318507" sideWeight="0.75810474" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24189526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318507" sideWeight="0.7157107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28428927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -723,15 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TimeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="32" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TalkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="72" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
@@ -777,20 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
@@ -830,17 +798,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+        <state line="57" column="0" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="602" selection-end="602" vertical-scroll-proportion="0.53859967">
+        <state line="65" column="22" selection-start="2529" selection-end="2529" vertical-scroll-proportion="-2.2695985">
           <folding>
-            <element signature="e#1899#1905#0" expanded="true" />
-            <element signature="e#3442#3448#0" expanded="true" />
+            <element signature="e#1942#1948#0" expanded="true" />
+            <element signature="e#3429#3435#0" expanded="true" />
           </folding>
         </state>
       </provider>
