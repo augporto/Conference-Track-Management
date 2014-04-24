@@ -9,18 +9,19 @@ import java.util.ArrayList;
  */
 public class main {
     private static String userInput;
+
     public static void main(String[] args) {
         userInput = "/Users/user/Desktop/GitProjects/Conference-Track-Management/src/main/resources/input.txt";
         ArrayList<Talk> fileContents = readTheFile();
         makeTheConference(fileContents);
     }
 
-    public static ArrayList<Talk> readTheFile(){
+    public static ArrayList<Talk> readTheFile() {
         ProposalFileReader proposalFileReader = new ProposalFileReader(userInput);
         return proposalFileReader.getData();
     }
 
-    public static void makeTheConference(ArrayList<Talk> fileContents){
+    public static void makeTheConference(ArrayList<Talk> fileContents) {
         Conference conference = new Conference(fileContents);
     }
 }

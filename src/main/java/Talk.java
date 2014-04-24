@@ -41,8 +41,14 @@ public class Talk {
         return durationInMinutes;
     }
 
-    public String toString(){
-        String talkAsString = (title + " " + durationInMinutes + "mins");
+    public String toString() {
+        String talkAsString;
+        if(switchForIfTalkContainsLightningDuration){
+            talkAsString = (title + " lightning");
+            switchForIfTalkContainsLightningDuration = false;
+        }else{
+            talkAsString = (title + " " + durationInMinutes + "mins");
+        }
         return talkAsString;
     }
 }

@@ -18,10 +18,10 @@ public class Session {
         setSessionDuration(sessionTime);
     }
 
-    public void setSessionDuration(String time){
-        if(time.equals("morning")){
+    public void setSessionDuration(String time) {
+        if (time.equals("morning")) {
             durationOfSessionToAllocateInMinutes = 180;
-        } else{
+        } else {
             durationOfSessionToAllocateInMinutes = 240;
         }
     }
@@ -43,7 +43,7 @@ public class Session {
         }
     }
 
-    public void updateTalkList(ArrayList<Talk> updatedTalks){
+    public void updateTalkList(ArrayList<Talk> updatedTalks) {
         events = updatedTalks;
     }
 

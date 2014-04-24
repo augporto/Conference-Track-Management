@@ -6,58 +6,58 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Time {
-    int hour=0;
-    int minute=0;
-    String period="AM";
+    int hour = 9;
+    int minute = 0;
+    String period = "AM";
     String time;
 
-    public Time(int hour, int minute, String period){
+    public Time(int hour, int minute, String period) {
         this.hour = hour;
         this.minute = minute;
         this.period = period;
         setTime();
     }
 
-    public void setTime(){
+    public void setTime() {
         String time = (hour + ":" + minute + period);
     }
 
-    public void adjust(int minutesToAddToTime){
-        if(minutesToAddToTime>=60){
-            int hourToAdd = minutesToAddToTime/60;
-            int minutesToAdd = minutesToAddToTime%60;
-            hour = hour+hourToAdd;
-            minute = minute+minutesToAdd;
-        } else{
+    public void adjust(int minutesToAddToTime) {
+        if (minutesToAddToTime >= 60) {
+            int hourToAdd = minutesToAddToTime / 60;
+            int minutesToAdd = minutesToAddToTime % 60;
+            hour = hour + hourToAdd;
+            minute = minute + minutesToAdd;
+        } else {
             minute = minute + minutesToAddToTime;
         }
-        if(minute>=60){
-            minute-=60;
-            hour+=1;
+        if (minute >= 60) {
+            minute -= 60;
+            hour += 1;
         }
-        if(hour>11){
-            period="PM";
+        if (hour > 11) {
+            period = "PM";
         }
-        if(hour>12){
-            hour-=12;
+        if (hour > 12) {
+            hour -= 12;
         }
         setTime();
     }
 
-    public String formatTime(){
+    public String formatTime() {
         String hourToString = Integer.toString(hour);
         String minuteToString = Integer.toString(minute);
-        if(hourToString.length() ==1){
+        if (hourToString.length() == 1) {
             hourToString = ("0" + hourToString);
         }
-        if(minuteToString.length() ==1){
+        if (minuteToString.length() == 1) {
             minuteToString = ("0" + minuteToString);
         }
         String formattedTime = (hourToString + ":" + minuteToString + period);
         return formattedTime;
     }
 
-    public String toString(){
+    public String toString() {
         return formatTime();
     }
 }

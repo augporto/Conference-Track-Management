@@ -2,6 +2,7 @@
   <dictionary name="user">
     <words>
       <w>bitcoin</w>
+      <w>formattedfrom</w>
     </words>
   </dictionary>
 </component>

@@ -12,24 +12,24 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class ProposalFileReader {
-    ArrayList<String> talksToBeFormatted;
+    ArrayList<String> talksToBeFormattedFromFile;
     ArrayList<Talk> formattedTalks;
 
     public ProposalFileReader(String file) {
-        talksToBeFormatted = new ArrayList<String>();
+        talksToBeFormattedFromFile = new ArrayList<String>();
         readProposal(file);
-        formatAllTalksInProposal(talksToBeFormatted);
+        formatAllTalksInProposal(talksToBeFormattedFromFile);
     }
 
     public void readProposal(String input) {
-        talksToBeFormatted = new ArrayList<String>();
+        talksToBeFormattedFromFile = new ArrayList<String>();
         try {
             String workingDirectory = System.getProperty("user.dir");
             String file = input.substring(59);
             BufferedReader bufferedReader = new BufferedReader(new FileReader(workingDirectory + file));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                talksToBeFormatted.add(line);
+                talksToBeFormattedFromFile.add(line);
             }
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: The file was not found.");
@@ -39,16 +39,16 @@ public class ProposalFileReader {
         }
     }
 
-    public ArrayList<Talk> formatAllTalksInProposal(ArrayList<String> talksToBeFormatted){
+    public ArrayList<Talk> formatAllTalksInProposal(ArrayList<String> talksToBeFormatted) {
         formattedTalks = new ArrayList<Talk>();
-        for(String theTalkToBeFormatted :talksToBeFormatted){
+        for (String theTalkToBeFormatted : talksToBeFormatted) {
             Talk formattedTalk = new Talk(theTalkToBeFormatted);
             formattedTalks.add(formattedTalk);
         }
         return formattedTalks;
     }
 
-    public ArrayList<Talk> getData(){
+    public ArrayList<Talk> getData() {
         return formattedTalks;
     }
 }
