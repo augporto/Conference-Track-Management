@@ -9,48 +9,41 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Track {
-    String name;
-    Session morningSession;
-    String lunch;
-    Session afternoonSession;
-    String networkingEvent;
-
     ArrayList<String> componentsOfTheTrack;
-
     Time time = new Time(9,0,0);
     String period = "AM";
 
 
-    public Track(){
-        assembleTrack();
-        printTrackList();
+    public Track(ArrayList<Talk> talks){
+        ArrayList<Talk> TalksToBeAllocatedASession = talks;
+        assembleTrack(TalksToBeAllocatedASession);
     }
 
-    public void setName(String name){
-       name = this.name;
-    }
-
-    public void assembleTrack(){
+    public void assembleTrack(ArrayList<Talk> talksToAllocate){
         componentsOfTheTrack = new ArrayList<String>();
-        morningSession = new Session();
+
+        Session morningSession = new Session(talksToAllocate);
         morningSession.setAsMorning();
-        formatSessionTracksByAddingTime(morningSession);
-        lunch = "12:00PM Lunch";
-        componentsOfTheTrack.add(lunch);
-        afternoonSession = new Session();
+
+        addSessionToTrack(morningSession);
+
+        componentsOfTheTrack.add("12:00PM Lunch");
+
+        Session afternoonSession = new Session(talksToAllocate);
         afternoonSession.setAsAfternoon();
-        formatSessionTracksByAddingTime(afternoonSession);
-        formatSessionTracksByAddingTime(afternoonSession);
-        networkingEvent = "PM Networking Event";
-        componentsOfTheTrack.add(networkingEvent);
+
+        addSessionToTrack(afternoonSession);
+
+        componentsOfTheTrack.add("PM Networking Event");
     }
 
-    public void formatSessionTracksByAddingTime(Session session){
+    public void addSessionToTrack(Session session){
         ArrayList<Talk> eventsInSession = session.getEventList();
-        for (Talk talks :eventsInSession){
+        for (Talk talk :eventsInSession){
             String timeToAdd = (time.toString().substring(0,5) + period);
-            String finalEvent = timeToAdd + " " + talks.title + " " + talks.durationInMinutes;
+            String finalEvent = timeToAdd + " " + talk.toString();
             componentsOfTheTrack.add(finalEvent);
+            updateTime(talk);
         }
     }
 
@@ -60,7 +53,10 @@ public class Track {
         System.out.println(time.toString().substring(0,5));
     }
 
-    public void updateTime(){
+    public void updateTime(Talk talkJustAdded){
+        int talkTime = talkJustAdded.durationInMinutes;
+        Clock clock = new Clock();
+        time = new Time(time.getHours()+(talkTime/60),00,00);
         if(time.getHours()<=12){
             period = "AM";
         } else{

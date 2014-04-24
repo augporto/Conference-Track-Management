@@ -40,4 +40,9 @@ public class Talk {
         }
         return durationInMinutes;
     }
+
+    public String toString(){
+        String talkAsString = (title + " " + durationInMinutes + "mins");
+        return talkAsString;
+    }
 }

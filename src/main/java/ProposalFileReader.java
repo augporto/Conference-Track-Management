@@ -3,8 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,27 +12,44 @@ import java.util.Scanner;
  * To change this template use File | Settings | File Templates.
  */
 public class ProposalFileReader {
-    Scanner sc = new Scanner(System.in);
-    public ProposalFileReader(String file){
+    ArrayList<String> talksToBeFormatted;
+    ArrayList<Talk> formattedTalks;
+
+    public ProposalFileReader(String file) {
+        talksToBeFormatted = new ArrayList<String>();
         readProposal(file);
+        formatAllTalksInProposal(talksToBeFormatted);
     }
 
-    public List<String> readProposal(String input){
-        String file = input;
-        List<String> unformattedTalks=new ArrayList<String>();
+    public void readProposal(String input) {
+        talksToBeFormatted = new ArrayList<String>();
         try {
             String workingDirectory = System.getProperty("user.dir");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(workingDirectory+"/src/main/resources/input.txt"));
+            String file = input.substring(59);
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(workingDirectory + file));
             String line;
-            while ((line = sc.nextLine())!= null){
-                unformattedTalks.add(line);
+            while ((line = bufferedReader.readLine()) != null) {
+                talksToBeFormatted.add(line);
             }
         } catch (FileNotFoundException e) {
+            System.out.println("ERROR: The file was not found.");
+        } catch (IOException e) {
             e.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
+            //System.out.println("ERROR: ??");   what is this error for??
         }
-        return  unformattedTalks;
+    }
+
+    public ArrayList<Talk> formatAllTalksInProposal(ArrayList<String> talksToBeFormatted){
+        formattedTalks = new ArrayList<Talk>();
+        for(String theTalkToBeFormatted :talksToBeFormatted){
+            Talk formattedTalk = new Talk(theTalkToBeFormatted);
+            formattedTalks.add(formattedTalk);
+        }
+        return formattedTalks;
+    }
+
+    public ArrayList<Talk> getData(){
+        return formattedTalks;
     }
 }
 

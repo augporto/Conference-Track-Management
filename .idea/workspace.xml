@@ -5,18 +5,19 @@
     <ignored path="Conference-Track-Management.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/TalkTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398244712408" ignored="false" />
-    <file path="/Talk.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398232824347" ignored="false" />
+    <file path="/Talk.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398295482156" ignored="false" />
     <file path="/a.dummy" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398229877255" ignored="false" />
     <file path="/*.regexp" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398229882800" ignored="false" />
-    <file path="/SessionTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398235609984" ignored="false" />
-    <file path="/Session.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398246480776" ignored="false" />
+    <file path="/SessionTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398298473533" ignored="false" />
+    <file path="/Session.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398295158823" ignored="false" />
     <file path="/TrackTest.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398249085797" ignored="false" />
-    <file path="/Track.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398249443067" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398250969076" ignored="false" />
+    <file path="/Track.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398300771747" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398301062222" ignored="false" />
     <file path="/Main.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398249880266" ignored="false" />
-    <file path="/Conference.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398249981956" ignored="false" />
+    <file path="/Conference.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398296582881" ignored="false" />
     <file path="/fileReader.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398250908203" ignored="false" />
-    <file path="/main.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398250429600" ignored="false" />
+    <file path="/main.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398291970240" ignored="false" />
+    <file path="/ProposalFileReader.java" changelist="72d6fd03-4d3e-4840-a9ca-0f6c190add5d" time="1398298231116" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TalkTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TalkTest.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
+            <state line="9" column="18" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,73 +90,7 @@
       <file leaf-file-name="Session.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Session.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="30" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Track.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Conference.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Conference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="8" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProposalFileReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ProposalFileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="33" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#643#651#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="0.2596538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrackTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TrackTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SessionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="36" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.0">
+            <state line="22" column="17" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,7 +99,67 @@
       <file leaf-file-name="Talk.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="47" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+            <state line="14" column="22" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Track.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="55" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.17162873">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Conference.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Conference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="32" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProposalFileReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ProposalFileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="6" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SessionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="5" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#409#415#0" expanded="true" />
+                <element signature="e#745#751#0" expanded="true" />
+                <element signature="e#1086#1092#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="12" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,18 +176,18 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Talk.java" />
         <option value="$PROJECT_DIR$/src/main/resources/input.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/SessionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TalkTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Session.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/TrackTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Track.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Conference.java" />
         <option value="$PROJECT_DIR$/src/main/java/fileReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Session.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProposalFileReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SessionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Talk.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Conference.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Track.java" />
       </list>
     </option>
   </component>
@@ -240,6 +235,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Conference-Track-Management" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -325,12 +324,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -433,7 +432,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Conference-Track-Management" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -580,20 +585,20 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.6770574" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23888092" sideWeight="0.6770574" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32294264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18436155" sideWeight="0.7755611" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2244389" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -656,7 +661,11 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -680,7 +689,11 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/SessionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="36" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#409#415#0" expanded="true" />
+            <element signature="e#745#751#0" expanded="true" />
+            <element signature="e#1086#1092#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -698,37 +711,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SessionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="36" selection-start="2431" selection-end="2431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TalkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="0" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -740,40 +725,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="9" column="12" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SessionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="5" selection-start="3196" selection-end="3196" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#409#415#0" expanded="true" />
+            <element signature="e#745#751#0" expanded="true" />
+            <element signature="e#1086#1092#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Talk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="22" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="6" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="30" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Conference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+        <state line="22" column="17" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ProposalFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+        <state line="44" column="0" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#643#651#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Conference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="0.2596538">
+        <state line="22" column="32" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="55" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.17162873">
           <folding />
         </state>
       </provider>
@@ -818,7 +834,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

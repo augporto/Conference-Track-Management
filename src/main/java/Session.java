@@ -8,68 +8,65 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Session {
-    public int totalDurationOfSessionInMinutes;
-    public int durationFilledUpByTalks;
     public ArrayList<Talk> events;
+    public int durationOfSessionToAllocateInMinutes;
     public boolean isFull;
 
-    public Session(){
-        events = new ArrayList<Talk>();
-        durationFilledUpByTalks = 0;
+    public Session(ArrayList<Talk> talksToAllocateInSession) {
+        events = talksToAllocateInSession;
         isFull = false;
     }
 
-    public void setAsMorning(){
-        totalDurationOfSessionInMinutes = 180;
-    }
-
-    public void setAsAfternoon(){
-        int amountOtTimePost4PMTheNetworkingEventStarts = 0;
-        totalDurationOfSessionInMinutes = 240-amountOtTimePost4PMTheNetworkingEventStarts;
-    }
-
-    public String checkSessionType(){
-        String type="";
-        if(totalDurationOfSessionInMinutes == 180){
-            return type = "Morning Session";
-        } else{
-            return type = "Afternoon Session";
-        }
-    }
-
-    public void addTalkToEventList(Talk unlistedTalk){
-        if(checkIfSessionHasCapacity(unlistedTalk)){
+    public void addTalkToEventList(Talk unlistedTalk) {
+        if (checkIfSessionHasCapacity(unlistedTalk)) {
             events.add(unlistedTalk);
-            durationFilledUpByTalks += unlistedTalk.durationInMinutes;
-        } else if (checkIfSessionIsFull()){
+            durationOfSessionToAllocateInMinutes -= unlistedTalk.durationInMinutes;
+        } else if (checkIfSessionIsFull()) {
             System.out.println("Session is full.");
         }
     }
 
-    public boolean checkIfSessionHasCapacity(Talk unlistedTalk){
-        if((totalDurationOfSessionInMinutes - durationFilledUpByTalks)< unlistedTalk.durationInMinutes){
+    public boolean checkIfSessionHasCapacity(Talk unlistedTalk) {
+        if (durationOfSessionToAllocateInMinutes < unlistedTalk.durationInMinutes) {
             return false;
-        } else{
+        } else {
             return true;
         }
     }
 
-    public boolean sessionFull(){
+    public void setAsMorning() {
+        durationOfSessionToAllocateInMinutes = 180;
+    }
+
+    public void setAsAfternoon() {
+        durationOfSessionToAllocateInMinutes = 300;
+    }
+
+    public String checkSessionType() {
+        String type;
+        if (durationOfSessionToAllocateInMinutes == 180) {
+            return type = "Morning Session";
+        } else {
+            return type = "Afternoon Session";
+        }
+    }
+
+    public boolean sessionFull() {
         System.out.println("ERROR: Session is full");
         return true;
     }
 
-    public boolean checkIfSessionIsFull(){
-        if(totalDurationOfSessionInMinutes == durationFilledUpByTalks){
+    public boolean checkIfSessionIsFull() {
+        if (durationOfSessionToAllocateInMinutes == 0) {
             isFull = true;
             return true;
-        }else{
+        } else {
             return false;
         }
 
     }
 
-    public ArrayList<Talk> getEventList(){
+    public ArrayList<Talk> getEventList() {
         return events;
     }
 

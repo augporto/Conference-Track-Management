@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -6,8 +8,19 @@
  * To change this template use File | Settings | File Templates.
  */
 public class main {
-    public static void main(String[] args){
-        String input = "/Users/user/Desktop/GitProjects/Conference-Track-Management/src/main/resources/input.txt";
-        ProposalFileReader proposalFileReader = new ProposalFileReader(input);
+    private static String userInput;
+    public static void main(String[] args) {
+        userInput = "/Users/user/Desktop/GitProjects/Conference-Track-Management/src/main/resources/input.txt";
+        ArrayList<Talk> fileContents = readTheFile();
+        makeTheConference(fileContents);
+    }
+
+    public static ArrayList<Talk> readTheFile(){
+        ProposalFileReader proposalFileReader = new ProposalFileReader(userInput);
+        return proposalFileReader.getData();
+    }
+
+    public static void makeTheConference(ArrayList<Talk> fileContents){
+        Conference conference = new Conference(fileContents);
     }
 }
