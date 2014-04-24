@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Conference {
-    Track trackOne;
-    Track trackTwo;
+    private Track trackOne;
+    private Track trackTwo;
     ArrayList<Talk> ConferenceTalksToBeAllocatedASession;
 
     public Conference(ArrayList<Talk> ProposedTalks) {
@@ -20,7 +20,8 @@ public class Conference {
 
     public void addTwoTracks(ArrayList<Talk> trackContents) {
         trackOne = new Track(trackContents);
-        trackTwo = new Track(trackContents);
+        ArrayList<Talk> unallocatedTrackContents = trackOne.getUnallocatedTalks();
+        trackTwo = new Track(unallocatedTrackContents);
     }
 
     public void printTwoTracks() {

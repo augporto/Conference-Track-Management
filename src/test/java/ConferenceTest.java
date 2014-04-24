@@ -1,3 +1,6 @@
+import org.junit.Before;
+import org.junit.Test;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -6,4 +9,22 @@
  * To change this template use File | Settings | File Templates.
  */
 public class ConferenceTest {
+    public ConferenceTest(){
+
+    }
+
+    @Before
+    public void initialize(){
+
+    }
+
+    @Test
+    public void testTwoTracksCreated(){
+
+    }
+
+    @Test
+    public void testTasksPrintedInSuccession(){
+
+    }
 }

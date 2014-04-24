@@ -8,70 +8,70 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Track {
-    ArrayList<String> componentsOfTheTrack;
-    ArrayList<Talk> talksToBeAssembled;
-    Time time = new Time(9, 0, "AM");
+    protected ArrayList<String> eventsInTrack;
+    private ArrayList<Talk> talksToAllocateToTrack;
+    private Time time = new Time(9, 0, "AM");
 
-    public Track(ArrayList<Talk> talks) {
-        ArrayList<Talk> masterOfTalksToBeSorted = talks;
-        componentsOfTheTrack = new ArrayList<String>();
+    public Track(ArrayList<Talk> masterOfTalksToBeSorted) {
+        eventsInTrack = new ArrayList<String>();
         assembleTrack(masterOfTalksToBeSorted);
     }
 
     public void assembleTrack(ArrayList<Talk> talks) {
-        talksToBeAssembled = talks;
+        talksToAllocateToTrack = talks;
+        orderTalks(talksToAllocateToTrack);
         assembleTrack();
     }
 
     public void assembleTrack() {
-        allocateMorningSession(talksToBeAssembled);
+        allocateSession(talksToAllocateToTrack, "morning");
         allocateLunch();
-        allocateAfternoonSession(talksToBeAssembled);
+        allocateSession(talksToAllocateToTrack, "afternoon");
         allocateNetworkingEvent();
     }
 
-    public void allocateMorningSession(ArrayList<Talk> talksToIncludeInMorningSession) {
-        Session morningSession = new Session(talksToIncludeInMorningSession, "morning");
-        talksToIncludeInMorningSession = sortTalksIntoSessionFormat(morningSession, talksToIncludeInMorningSession);
-        morningSession.updateTalkList(talksToIncludeInMorningSession);
-        addSessionToTrack(morningSession);
-        talksToBeAssembled = deleteSortedTalksFromMaster(talksToBeAssembled, talksToIncludeInMorningSession);
-    }
-
-    public void allocateAfternoonSession(ArrayList<Talk> talksToIncludeInAfternoonSession) {
-        Session afternoonSession = new Session(talksToIncludeInAfternoonSession, "afternoon");
-        talksToIncludeInAfternoonSession = sortTalksIntoSessionFormat(afternoonSession, talksToIncludeInAfternoonSession);
-        afternoonSession.updateTalkList(talksToIncludeInAfternoonSession);
-        addSessionToTrack(afternoonSession);
-        talksToBeAssembled = deleteSortedTalksFromMaster(talksToBeAssembled, talksToIncludeInAfternoonSession);
+    public void allocateSession(ArrayList<Talk> talksToIncludeInSession, String sessionSegment) {
+        Session session = new Session(talksToIncludeInSession, sessionSegment);
+        talksToIncludeInSession = sortTalksIntoSessionFormat(session, talksToIncludeInSession);
+        session.updateTalkList(talksToIncludeInSession);
+        addSessionToTrack(session);
+        talksToAllocateToTrack = deleteSortedTalksFromMaster(talksToAllocateToTrack, talksToIncludeInSession);
     }
 
     public void addSessionToTrack(Session session) {
         ArrayList<Talk> eventsInSession = session.getEventList();
         for (Talk talk : eventsInSession) {
             String finalEvent = time.toString() + " " + talk.toString();
-            componentsOfTheTrack.add(finalEvent);
+            eventsInTrack.add(finalEvent);
             updateTime(talk);
         }
     }
 
     public ArrayList<Talk> sortTalksIntoSessionFormat(Session sessionToSortFor, ArrayList<Talk> talksToBeSorted) {
         ArrayList<Talk> talksAllocatedForSession = new ArrayList<Talk>();
-        ArrayList<Talk> TalksToBeFormatted = talksToBeSorted;
+        ArrayList<Talk> talksToBeFormatted = talksToBeSorted;
         int minutesToSortInto = sessionToSortFor.durationOfSessionToAllocateInMinutes;
         while (minutesToSortInto != 0) {
-            for (int x = 0; x < TalksToBeFormatted.size(); x++) {
-                if (minutesToSortInto >= TalksToBeFormatted.get(x).durationInMinutes) {
-                    minutesToSortInto = minutesToSortInto - TalksToBeFormatted.get(x).durationInMinutes;
-                    talksAllocatedForSession.add(TalksToBeFormatted.get(x));
-                    TalksToBeFormatted.remove(x);
+            for(Talk talk: talksToBeFormatted){
+                if (minutesToSortInto >= talk.durationInMinutes) {
+                    minutesToSortInto = minutesToSortInto - talk.durationInMinutes;
+                    talksAllocatedForSession.add(talk);
                 }
             }
-            if (talksToBeSorted.size() == 0 || (sessionToSortFor.durationOfSessionToAllocateInMinutes == 240 && minutesToSortInto <= 60)) {
+            if (breakLoopConditions(sessionToSortFor, talksToBeSorted, minutesToSortInto)) {
                 break;
             }
         }
         return talksAllocatedForSession;
+    }
+
+    public boolean breakLoopConditions(Session sessionToSort, ArrayList<Talk> talksToSort, int minutesToSortInto){
+        if(talksToSort.size() == 0){
+            return true;
+        } else if(sessionToSort.durationOfSessionToAllocateInMinutes == 240 && minutesToSortInto <= 60){
+            return true;
+        }
+        return false;
     }
 
     public ArrayList<Talk> deleteSortedTalksFromMaster(ArrayList<Talk> master, ArrayList<Talk> toBeDeleted) {
@@ -85,6 +85,23 @@ public class Track {
         return master;
     }
 
+    public void orderTalks(ArrayList<Talk> talksToBeOrdered){
+        int maxTalkDuration = 60;
+        ArrayList<Talk> orderedTalks = new ArrayList<Talk>();
+        while(talksToBeOrdered.size() !=0){
+            for(int x = maxTalkDuration; x >0; x--){
+                for(int y = 0; y<talksToBeOrdered.size();y++){
+                    if(talksToBeOrdered.get(y).durationInMinutes == x){
+                        orderedTalks.add(talksToBeOrdered.get(y));
+                        talksToBeOrdered.remove(y);
+                        y--;
+                    }
+                }
+            }
+        }
+        talksToAllocateToTrack = orderedTalks;
+    }
+
     public String updateTime(Talk talkJustAdded) {
         int talkTime = talkJustAdded.durationInMinutes;
         time.adjust(talkTime);
@@ -92,19 +109,27 @@ public class Track {
     }
 
     public void allocateLunch() {
-        componentsOfTheTrack.add("12:00PM Lunch");
+        eventsInTrack.add("12:00PM Lunch");
         time.adjust(60);
     }
 
     public void allocateNetworkingEvent() {
-        if(time.hour <4){
-            time.adjust((4-time.hour)*60);
+        checkNetworkEventTimeIsInBoundary();
+        eventsInTrack.add(time.toString() + " Networking Event");
+    }
+
+    public void checkNetworkEventTimeIsInBoundary() {
+        if (time.hour < 4) {
+            time.adjust((4 - time.hour) * 60);
         }
-        componentsOfTheTrack.add(time.toString() + " Networking Event");
+    }
+
+    public ArrayList<Talk> getUnallocatedTalks(){
+        return talksToAllocateToTrack;
     }
 
     public void printTrackList() {
-        for (String tracks : componentsOfTheTrack) {
+        for (String tracks : eventsInTrack) {
             System.out.println(tracks);
         }
         System.out.println();

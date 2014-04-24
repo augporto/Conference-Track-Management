@@ -6,20 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Time {
-    int hour = 9;
-    int minute = 0;
-    String period = "AM";
-    String time;
+    protected int hour = 9;
+    private int minute = 0;
+    private String period = "AM";
 
     public Time(int hour, int minute, String period) {
         this.hour = hour;
         this.minute = minute;
         this.period = period;
-        setTime();
-    }
-
-    public void setTime() {
-        String time = (hour + ":" + minute + period);
+        formatTime();
     }
 
     public void adjust(int minutesToAddToTime) {
@@ -41,7 +36,7 @@ public class Time {
         if (hour > 12) {
             hour -= 12;
         }
-        setTime();
+        formatTime();
     }
 
     public String formatTime() {

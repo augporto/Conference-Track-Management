@@ -10,11 +10,9 @@ import java.util.ArrayList;
 public class Session {
     public ArrayList<Talk> events;
     public int durationOfSessionToAllocateInMinutes;
-    boolean isFull;
 
     public Session(ArrayList<Talk> talksToAllocateInSession, String sessionTime) {
         events = talksToAllocateInSession;
-        isFull = false;
         setSessionDuration(sessionTime);
     }
 
@@ -49,7 +47,6 @@ public class Session {
 
     public boolean checkIfSessionIsFull() {
         if (durationOfSessionToAllocateInMinutes == 0) {
-            isFull = true;
             return true;
         } else {
             return false;

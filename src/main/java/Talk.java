@@ -25,7 +25,7 @@ public class Talk {
                 Integer.parseInt(talkContents.substring(x, x + 1));
                 return talkContents.substring(0, x - 1);
             } catch (NumberFormatException e) {
-
+                continue;
             }
         }
         switchForIfTalkContainsLightningDuration = true;
@@ -43,12 +43,13 @@ public class Talk {
 
     public String toString() {
         String talkAsString;
-        if(switchForIfTalkContainsLightningDuration){
+        if (switchForIfTalkContainsLightningDuration) {
             talkAsString = (title + " lightning");
             switchForIfTalkContainsLightningDuration = false;
-        }else{
+        } else {
             talkAsString = (title + " " + durationInMinutes + "mins");
         }
         return talkAsString;
     }
+
 }

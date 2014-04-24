@@ -13,7 +13,7 @@ public class main {
     public static void main(String[] args) {
         userInput = "/Users/user/Desktop/GitProjects/Conference-Track-Management/src/main/resources/input.txt";
         ArrayList<Talk> fileContents = readTheFile();
-        makeTheConference(fileContents);
+        constructTheConference(fileContents);
     }
 
     public static ArrayList<Talk> readTheFile() {
@@ -21,7 +21,7 @@ public class main {
         return proposalFileReader.getData();
     }
 
-    public static void makeTheConference(ArrayList<Talk> fileContents) {
+    public static void constructTheConference(ArrayList<Talk> fileContents) {
         Conference conference = new Conference(fileContents);
     }
 }

@@ -12,31 +12,28 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class ProposalFileReader {
-    ArrayList<String> talksToBeFormattedFromFile;
-    ArrayList<Talk> formattedTalks;
+    private ArrayList<Talk> formattedTalks;
 
     public ProposalFileReader(String file) {
-        talksToBeFormattedFromFile = new ArrayList<String>();
-        readProposal(file);
+        ArrayList<String> talksToBeFormattedFromFile = readProposal(file);
         formatAllTalksInProposal(talksToBeFormattedFromFile);
     }
 
-    public void readProposal(String input) {
-        talksToBeFormattedFromFile = new ArrayList<String>();
+    public ArrayList<String> readProposal(String input) {
+        ArrayList<String> talksFormattedToStrings = new ArrayList<String>();
         try {
-            String workingDirectory = System.getProperty("user.dir");
-            String file = input.substring(59);
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(workingDirectory + file));
+            String workingDirectory = System.getProperty("user.dir") + input.substring(59);
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(workingDirectory));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                talksToBeFormattedFromFile.add(line);
+                talksFormattedToStrings.add(line);
             }
         } catch (FileNotFoundException e) {
             System.out.println("ERROR: The file was not found.");
         } catch (IOException e) {
-            e.printStackTrace();
-            //System.out.println("ERROR: ??");   what is this error for??
+            System.out.println("ERROR: General I/O error.");
         }
+        return talksFormattedToStrings;
     }
 
     public ArrayList<Talk> formatAllTalksInProposal(ArrayList<String> talksToBeFormatted) {
