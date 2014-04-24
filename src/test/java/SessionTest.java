@@ -18,24 +18,21 @@ public class SessionTest {
     @Test
     public void checkSessionIsMorning(){
         ArrayList<Talk> talksToAllocateInSession = new ArrayList<Talk>();
-        Session session = new Session(talksToAllocateInSession);
-        session.durationOfSessionToAllocateInMinutes = 180;
-        Assert.assertEquals("Morning Session", session.checkSessionType());
+        Session session = new Session(talksToAllocateInSession, "morning");
+        Assert.assertEquals(180,session.durationOfSessionToAllocateInMinutes);
     }
 
     @Test
     public void checkSessionNotAfterNoon(){
         ArrayList<Talk> talksToAllocateInSession = new ArrayList<Talk>();
-        Session session = new Session(talksToAllocateInSession);
-        session.durationOfSessionToAllocateInMinutes = 180;
-        Assert.assertNotSame("Afternoon Session", session.checkSessionType());
+        Session session = new Session(talksToAllocateInSession, "morning");
+        Assert.assertNotSame(300, session.durationOfSessionToAllocateInMinutes);
     }
 
     @Test
     public void checkSessionContainsEvents(){
         ArrayList<Talk> talksToAllocateInSession = new ArrayList<Talk>();
-        Session session = new Session(talksToAllocateInSession);
-        session.setAsMorning();
+        Session session = new Session(talksToAllocateInSession, "morning");
         Talk talk1 = new Talk("WooShoo ninja class 30min");
         Talk talk2 = new Talk("ancient crane fighting class 60min");
         Talk talk3 = new Talk("kung fu panda movie analysis 50min");

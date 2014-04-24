@@ -32,7 +32,7 @@ public class Conference {
         System.out.println("Track1:");
         track1.printTrackList();
         System.out.println();
-        System.out.println("track2:");
+        System.out.println("Track2:");
         track2.printTrackList();
         System.out.println();
 
