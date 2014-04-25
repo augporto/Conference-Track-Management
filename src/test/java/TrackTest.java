@@ -6,17 +6,16 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user
+ * author : Robert Blasetti
  * Date: 23/04/2014
  * Time: 6:06 PM
- * To change this template use File | Settings | File Templates.
  */
 public class TrackTest {
     Track track;
     ArrayList<Talk> mockTalkList;
 
     @Before
-    public void initialize(){
+    public void initialize() {
         mockTalkList = new ArrayList<Talk>();
         track = new Track(mockTalkList);
         Talk talk1 = new Talk("Being Bruce Lee 40min");
@@ -32,8 +31,8 @@ public class TrackTest {
     @Test
     public void checkTrackContainsLunchAt12() {
         track.allocateLunchToTrack();
-        for(int x=0; x<track.eventsInTrack.size();x++){
-            if(track.eventsInTrack.get(x) == "12:00PM Lunch"){
+        for (int x = 0; x < track.eventsInTrack.size(); x++) {
+            if (track.eventsInTrack.get(x) == "12:00PM Lunch") {
                 Assert.assertEquals(track.eventsInTrack.get(x), "12:00PM Lunch");
             }
         }
@@ -42,26 +41,23 @@ public class TrackTest {
     @Test
     public void checkTrackContainsNetworkingEventAfter4PM() {
         track.allocateNetworkingEventToTrack();
-        for(int x=0; x<track.eventsInTrack.size();x++){
-            if(track.eventsInTrack.get(x) == "04:00PM Networking Event"){
+        for (int x = 0; x < track.eventsInTrack.size(); x++) {
+            if (track.eventsInTrack.get(x) == "04:00PM Networking Event") {
                 Assert.assertEquals(track.eventsInTrack.get(x), "04:00PM Networking Event");
             }
         }
     }
 
     @Test
-    public void CheckTimeFormatted(){
+    public void CheckTimeFormatted() {
         Assert.assertEquals("10:00AM", track.timeToString());
     }
 
     @Test
-    public void CheckTimeCanBeUpdated(){
+    public void CheckTimeCanBeUpdated() {
         track.updateTime(track.talksToAllocateToTrack.get(0));
         Assert.assertEquals("10:40AM", track.timeToString());
     }
-
-
-
 
 
 }

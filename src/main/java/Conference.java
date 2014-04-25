@@ -2,10 +2,9 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user
+ * author : Robert Blasetti
  * Date: 23/04/2014
  * Time: 8:39 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Conference {
     protected Track trackOne;

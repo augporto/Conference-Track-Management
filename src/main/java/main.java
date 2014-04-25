@@ -2,10 +2,9 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user
+ * author : Robert Blasetti
  * Date: 23/04/2014
  * Time: 8:18 PM
- * To change this template use File | Settings | File Templates.
  */
 public class main {
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class main {
         printConferenceSchedule(conference);
     }
 
-    public static void printConferenceSchedule(Conference conference){
+    public static void printConferenceSchedule(Conference conference) {
         conference.printTwoTracks();
     }
 }

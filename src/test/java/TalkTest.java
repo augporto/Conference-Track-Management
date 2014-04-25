@@ -3,10 +3,9 @@ import org.junit.Test;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user
+ * author : Robert Blasetti
  * Date: 23/04/2014
  * Time: 12:24 PM
- * To change this template use File | Settings | File Templates.
  */
 public class TalkTest {
 

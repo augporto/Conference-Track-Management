@@ -6,10 +6,9 @@ import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user
+ * author : Robert Blasetti
  * Date: 23/04/2014
  * Time: 3:25 PM
- * To change this template use File | Settings | File Templates.
  */
 public class SessionTest {
     ArrayList<Talk> talksToAllocateInSession;
@@ -62,7 +61,7 @@ public class SessionTest {
     }
 
     @Test
-    public void checkTheListOfTalksCanBeUpdated(){
+    public void checkTheListOfTalksCanBeUpdated() {
         Talk talk1 = new Talk("WooShoo ninja class information 30min");
         Talk talk2 = new Talk("Ancient Crane fighting class information 60min");
         Talk talk3 = new Talk("Kung-Fu Panda movie analysis 50min");
@@ -80,7 +79,7 @@ public class SessionTest {
     }
 
     @Test
-    public void testSessionHasCapacity(){
+    public void testSessionHasCapacity() {
         Talk talk1 = new Talk("WooShoo ninja class information 30min");
         Assert.assertTrue(session.checkIfSessionHasCapacity(talk1));
     }
