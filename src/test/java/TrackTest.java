@@ -1,3 +1,9 @@
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -6,59 +12,53 @@
  * To change this template use File | Settings | File Templates.
  */
 public class TrackTest {
-//    Track track;
-//    public void TrackTest() {
-//
-//    }
+    Track track;
+    ArrayList<Talk> mockTalkList;
 
-//    @Before
-//    public void initialise(){
-//        ArrayList<Talk> mockTalkList = new ArrayList<Talk>();
-//        track = new Track(mockTalkList);
-//        track.componentsOfTheTrack.add("WooShoo ninja class information 30min");
-//        track.componentsOfTheTrack.add("Ancient Crane fighting class information 60min");
-//        track.componentsOfTheTrack.add("Kung-Fu Panda movie analysis 40min");
-//        track.componentsOfTheTrack.add("The ABC's of BJJ 30min");
-//        track.componentsOfTheTrack.add("Channeling your inner Karate Kid 20min");
-//
-//
-//    }
-//
-//    @Test
-//    public void checkTrackContainsLunchAt12() {
-//        track.allocateLunch();
-//        for(int x=0; x<track.componentsOfTheTrack.size();x++){
-//            if(track.componentsOfTheTrack.get(x) == "12:00PM Lunch"){
-//                Assert.assertEquals(track.componentsOfTheTrack.get(x), "12:00PM Lunch");
-//            }
-//        }
-//    }
-//
-//    @Test
-//    public void checkTrackContainsNetworkingEventAtAtleast4PM() {
-//        track.allocateNetworkingEvent();
-//        for(int x=0; x<track.componentsOfTheTrack.size();x++){
-//            if(track.componentsOfTheTrack.get(x) == "04:00PM Networking Event"){
-//                Assert.assertEquals(track.componentsOfTheTrack.get(x), "04:00PM Networking Event");
-//            }
-//        }
-//    }
-//
-//    @Test
-//    public void checkNoEventsListedTwice() {
-//
-//    }
-//
-//    @Test
-//    public void checkAllEventsListed() {
-//
-//    }
-//
-//    @Test
-//    public void checkThereIsNoGapPriorToLunch(){
-//
-//    }
+    @Before
+    public void initialize(){
+        mockTalkList = new ArrayList<Talk>();
+        track = new Track(mockTalkList);
+        Talk talk1 = new Talk("Being Bruce Lee 40min");
+        track.talksToAllocateToTrack.add(talk1);
+        track.eventsInTrack.add("Ancient Crane fighting class information 60min");
+        track.eventsInTrack.add("Kung-Fu Panda movie analysis 40min");
+        track.eventsInTrack.add("The ABC's of BJJ 30min");
+        track.eventsInTrack.add("Channeling your inner Karate Kid 20min");
 
+
+    }
+
+    @Test
+    public void checkTrackContainsLunchAt12() {
+        track.allocateLunchToTrack();
+        for(int x=0; x<track.eventsInTrack.size();x++){
+            if(track.eventsInTrack.get(x) == "12:00PM Lunch"){
+                Assert.assertEquals(track.eventsInTrack.get(x), "12:00PM Lunch");
+            }
+        }
+    }
+
+    @Test
+    public void checkTrackContainsNetworkingEventAfter4PM() {
+        track.allocateNetworkingEventToTrack();
+        for(int x=0; x<track.eventsInTrack.size();x++){
+            if(track.eventsInTrack.get(x) == "04:00PM Networking Event"){
+                Assert.assertEquals(track.eventsInTrack.get(x), "04:00PM Networking Event");
+            }
+        }
+    }
+
+    @Test
+    public void CheckTimeFormatted(){
+        Assert.assertEquals("10:00AM", track.timeToString());
+    }
+
+    @Test
+    public void CheckTimeCanBeUpdated(){
+        track.updateTime(track.talksToAllocateToTrack.get(0));
+        Assert.assertEquals("10:40AM", track.timeToString());
+    }
 
 
 

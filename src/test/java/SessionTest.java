@@ -15,10 +15,6 @@ public class SessionTest {
     ArrayList<Talk> talksToAllocateInSession;
     Session session;
 
-    public SessionTest() {
-
-    }
-
     @Before
     public void initialize() {
         talksToAllocateInSession = new ArrayList<Talk>();

@@ -9,9 +9,6 @@ import org.junit.Test;
  * To change this template use File | Settings | File Templates.
  */
 public class TalkTest {
-    public void TalkTest() {
-
-    }
 
     @Test
     public void testTalkFormatBreakDownOfTitle() {

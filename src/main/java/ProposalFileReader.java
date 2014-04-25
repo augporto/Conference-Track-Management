@@ -38,14 +38,14 @@ public class ProposalFileReader {
 
     public ArrayList<Talk> formatAllTalksInProposal(ArrayList<String> talksToBeFormatted) {
         formattedTalks = new ArrayList<Talk>();
-        for (String theTalkToBeFormatted : talksToBeFormatted) {
-            Talk formattedTalk = new Talk(theTalkToBeFormatted);
+        for (String unformattedTalk : talksToBeFormatted) {
+            Talk formattedTalk = new Talk(unformattedTalk);
             formattedTalks.add(formattedTalk);
         }
         return formattedTalks;
     }
 
-    public ArrayList<Talk> getData() {
+    public ArrayList<Talk> getTalkData() {
         return formattedTalks;
     }
 }
